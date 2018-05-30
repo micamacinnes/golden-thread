@@ -1,22 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    
 </ion-header>
 
 <ion-content>
-
+    <p style = "text-align:center;"><img src = " /assets/pizza.jpg" width = "180" height = "180"/></p>
       <ion-list>
           <ion-item>
-            <ion-label floating>Username</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-label floating>username</ion-label>
+            <ion-input placeholder="username" [(ngModel)]="username"></ion-input>
           </ion-item>
       
           <ion-item>
-            <ion-label floating>Password</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-label floating>password</ion-label>
+            <ion-input placeholder="password" [(ngModel)]="password"></ion-input>
           </ion-item>
         
         </ion-list>

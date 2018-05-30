@@ -1,7 +1,7 @@
 <ion-header>
         <ion-navbar>
           <ion-title>
-            Welcome!
+            Welcome back!
           </ion-title>
         </ion-navbar>
       </ion-header>
@@ -10,36 +10,21 @@
             <div padding>
                     <ion-segment [(ngModel)]="menu">
                       <ion-segment-button value = "profile" (click)="navigateToProfile()">
-                        profile
+                          <ion-icon name="contact"></ion-icon>
                       </ion-segment-button>
-                     
+                      
                       <ion-segment-button value = "browse" (click)="navigateToBrowse()">
-                            browse
+                          <ion-icon name="search"></ion-icon>
                           </ion-segment-button>
+                          <ion-segment-button value = "help">
+                        <ion-icon name="help-circle"></ion-icon>
+                        </ion-segment-button>
+                  
                     </ion-segment>
                   </div>
+
+                  Welcome back {{username}}, your password is : {{password}}
                   
-                  <div [ngSwitch]="menu">
-                    <ion-list *ngSwitchCase="'puppies'">
-                      <ion-item>
-                        <ion-thumbnail item-start>
-                          <img src="img/thumbnail-puppy-1.jpg">
-                        </ion-thumbnail>
-                        <h2>Ruby</h2>
-                      </ion-item>
-                      ...
-                    </ion-list>
-                  
-                    <ion-list *ngSwitchCase="'kittens'">
-                      <ion-item>
-                        <ion-thumbnail item-start>
-                          <img src="img/thumbnail-kitten-1.jpg">
-                        </ion-thumbnail>
-                        <h2>Luna</h2>
-                      </ion-item>
-                      ...
-                    </ion-list>
-                  </div>
       
 
       </ion-content>

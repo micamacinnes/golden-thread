@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ProfilePage } from '../pages/profile/profile';
 import { BrowsePage } from '../pages/browse/browse';
+import { Project1Page } from '../pages/project1/project1';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrowsePage } from '../pages/browse/browse';
     LoginPage,
     RegisterPage,
     ProfilePage,
-    BrowsePage
+    BrowsePage,
+    Project1Page
 
   ],
   imports: [
@@ -32,7 +34,8 @@ import { BrowsePage } from '../pages/browse/browse';
     LoginPage,
     RegisterPage,
     ProfilePage,
-    BrowsePage
+    BrowsePage, 
+    Project1Page
   ],
   providers: [
     StatusBar,
