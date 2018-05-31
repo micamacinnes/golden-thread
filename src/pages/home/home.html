@@ -12,10 +12,10 @@
       
           <ion-item>
             <ion-label floating>password</ion-label>
-            <ion-input placeholder="password" [(ngModel)]="password"></ion-input>
+            <ion-input type ="password" [(ngModel)]="password"></ion-input>
           </ion-item>
         
         </ion-list>
-<button ion-button (click)="navigateToLogin()">Login</button>
-<a ion-button (click)= "navigateToRegister()">Register</a>
+        <p style = "text-align:center;"><button ion-button (click)="login()">Login</button>
+<a ion-button (click)= "navigateToRegister()">Register</a></p>
 </ion-content>

@@ -1,30 +1,52 @@
-<ion-header>
-        <ion-navbar>
-          <ion-title>
-            Welcome back!
-          </ion-title>
-        </ion-navbar>
-      </ion-header>
+
       
       <ion-content>
             <div padding>
                     <ion-segment [(ngModel)]="menu">
-                      <ion-segment-button value = "profile" (click)="navigateToProfile()">
+                      <ion-segment-button value = "profile">
                           <ion-icon name="contact"></ion-icon>
                       </ion-segment-button>
                       
-                      <ion-segment-button value = "browse" (click)="navigateToBrowse()">
+                      <ion-segment-button value = "browse" (click) = "navigateToBrowse()">
                           <ion-icon name="search"></ion-icon>
                           </ion-segment-button>
-                          <ion-segment-button value = "help">
-                        <ion-icon name="help-circle"></ion-icon>
+                          <ion-segment-button value = "pie" (click) = "navigateToProfile()">
+                        <ion-icon name="pie"></ion-icon>
                         </ion-segment-button>
-                  
+
+                        <ion-segment-button value = "settings" (click) = "navigateToSettings()">
+                            <ion-icon name="settings"></ion-icon>
+                            </ion-segment-button>
                     </ion-segment>
                   </div>
 
-                  Welcome back {{username}}, your password is : {{password}}
+
+                  <div>
+                      <!-- <div align="right">
+                        Edit&nbsp;
+                        <ion-icon name="create"></ion-icon>
+                      </div>
+                      <div align="center"> -->
+                        <h1>
+                          <b>{{firstname}} {{lastname}}</b>
+                        </h1>
+                         <p style = "text-align:center;"><img src = " /assets/propic.jpg" width = "120" height = "120"/></p>
+                        
+                      </div>
+                  <ion-item-group>
+                      <ion-item-divider color="primary">Profile</ion-item-divider>
+                      <ion-item>Username: {{username}}</ion-item>
+                      <ion-item>Password: {{password}}</ion-item>
+                      <ion-item>Email: {{email}}</ion-item>
+             
                   
+                    </ion-item-group>
+
+          
+        
+                    <br>
+                    <p style = "text-align:center;"><button ion-button value = "logout" (click)= "navigateToHome()">Logout</button></p>
+                    <br>
       
 
       </ion-content>

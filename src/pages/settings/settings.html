@@ -1,0 +1,43 @@
+
+<ion-content>
+        <div padding>
+            <ion-segment [(ngModel)]="menu">
+              <ion-segment-button value = "profile" (click)="navigateToLogin()">
+                  <ion-icon name="contact"></ion-icon>
+              </ion-segment-button>
+              
+              <ion-segment-button value = "browse" (click)="navigateToBrowse()">
+                  <ion-icon name="search"></ion-icon>
+                  </ion-segment-button>
+                  <ion-segment-button value = "pie" (click) = "navigateToProfile()">
+                <ion-icon name="pie"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value = "settings">
+                    <ion-icon name="settings"></ion-icon>
+                    </ion-segment-button>
+          
+            </ion-segment>
+          </div>
+
+          <ion-item-divider color="primary">Billing Information</ion-item-divider>
+                      <ion-item>Billing Address: {{address}}</ion-item>
+                      <ion-item>Credit Card Number: {{ccnum}}</ion-item>
+                      <ion-item-divider color="primary">History</ion-item-divider>
+                      <ion-item>Total Donated:</ion-item>
+                      <ion-item>Favorite Charity:</ion-item>
+                      
+
+    <ion-item-divider color="primary">Payment History</ion-item-divider>
+    <ion-item>
+      5/31/18:</ion-item>
+    <ion-item>
+      5/31/18:</ion-item>
+      <br>
+      
+      <p style = "text-align:center;"><button ion-button>Renew Subscription</button>
+        <a ion-button>Pay Now</a></p>
+    
+        
+          
+          
+    </ion-content>

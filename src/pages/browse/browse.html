@@ -1,16 +1,29 @@
-<ion-header>
-        <ion-navbar>
-          <ion-title>
-            Browse
-          </ion-title>
-        </ion-navbar>
-      </ion-header>
-      
+
       <ion-content>
+
+          <div padding>
+              <ion-segment [(ngModel)]="menu">
+                <ion-segment-button value = "profile" (click) = "navigateToLogin()">
+                    <ion-icon name="contact"></ion-icon>
+                </ion-segment-button>
+                
+                <ion-segment-button value = "browse">
+                    <ion-icon name="search"></ion-icon>
+                    </ion-segment-button>
+                    <ion-segment-button value = "pie" (click) = "navigateToProfile()">
+                  <ion-icon name="pie"></ion-icon>
+                  </ion-segment-button>
+                  <ion-segment-button value = "settings" (click) = "navigateToSettings()">
+                      <ion-icon name="settings"></ion-icon>
+                      </ion-segment-button>
+              </ion-segment>
+            </div>
+
+            <ion-item-divider color="primary">Browse Charities</ion-item-divider>
           <ion-list>
               <ion-item>
                 <ion-icon name="Charity" item-start></ion-icon>
-                  <button ion-button clear (click)="navigateToProject1()"> Pizza Project </button>
+                  <button ion-button clear *ngFor="let charity of charities" (click)="navigateToCharity(charity)">{{charity.name}} </button>
                 <ion-icon name="globe" item-end color="primary"></ion-icon>
               </ion-item>
               <ion-item>

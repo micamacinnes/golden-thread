@@ -1,27 +1,29 @@
-<ion-header>
-        <ion-navbar>
-          <ion-title>
-            Profile
-          </ion-title>
-        </ion-navbar>
-      </ion-header>
+
 <ion-content>
     <div padding>
         <ion-segment [(ngModel)]="menu">
-          <ion-segment-button value = "profile" (click)="login()">
+          <ion-segment-button value = "profile" (click)="navigateToLogin()">
               <ion-icon name="contact"></ion-icon>
           </ion-segment-button>
           
           <ion-segment-button value = "browse" (click)="navigateToBrowse()">
               <ion-icon name="search"></ion-icon>
               </ion-segment-button>
-              <ion-segment-button value = "help">
-            <ion-icon name="help-circle"></ion-icon>
+              <ion-segment-button value = "pie">
+            <ion-icon name="pie"></ion-icon>
             </ion-segment-button>
+            <ion-segment-button value = "settings" (click) = "navigateToSettings()">
+                <ion-icon name="settings"></ion-icon>
+                </ion-segment-button>
       
         </ion-segment>
       </div>
- 
-    <br>
-      <button ion-button>Logout</button>
+      <ion-item-divider color="primary">Conservation Portfolio</ion-item-divider>
+  
+      <section class="chart-wrapper">
+          <canvas #pieChart></canvas>
+       </section>
+    
+      
+      
 </ion-content>

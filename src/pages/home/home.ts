@@ -19,40 +19,54 @@ export class HomePage {
   ionViewDidLoad() {
     console.log("ionViewDidLoad LoginPage");
   }
+
   login() {
     // Our username and password (on this) should have data from the user
-    this.navCtrl.push(ProfilePage, {
-      username: this.username,
-      password: this.password
-    });
-  }
-
-
-  navigateToLogin() {
     this.navCtrl.push(LoginPage, {
       username: this.username,
       password: this.password
     });
-    console.log(this.username);
-
   }
-
-  navigateToRegister() {
-    this.navCtrl.push(RegisterPage);
-  }
-
-  navigateToProfile() {
-    this.navCtrl.push(ProfilePage, {
-      password: this.password,
-       username: this.username
-      });
-    alert(this.username);
-  }
-
-  navigateToBrowse() {
-    this.navCtrl.push(BrowsePage);
-  }
-
-
-
 }
+
+  // ionViewDidLoad() {
+  //   console.log("ionViewDidLoad LoginPage");
+  // }
+  
+  // login() {
+  //   Our username and password (on this) should have data from the user
+  //   this.navCtrl.push(ProfilePage, {
+  //     username: this.username,
+  //     password: this.password
+  //   });
+  // }
+
+
+  // navigateToLogin() {
+  //   this.navCtrl.push(LoginPage, {
+  //     username: this.username,
+  //     password: this.password
+  //   });
+  //   console.log(this.username);
+
+  // }
+
+  // navigateToRegister() {
+  //   this.navCtrl.push(RegisterPage);
+  // }
+
+  // navigateToProfile() {
+  //   this.navCtrl.push(ProfilePage, {
+  //     password: this.password,
+  //      username: this.username
+  //     });
+  //   alert(this.username);
+  // }
+
+  // navigateToBrowse() {
+  //   this.navCtrl.push(BrowsePage);
+  // }
+
+
+
+
