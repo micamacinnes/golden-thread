@@ -27,6 +27,12 @@ export class HomePage {
       password: this.password
     });
   }
+
+
+  navigateToRegister() {
+    this.navCtrl.push(RegisterPage);
+  }
+
 }
 
   // ionViewDidLoad() {

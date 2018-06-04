@@ -44,7 +44,6 @@ export class BrowsePage {
   }
 
 
-
   navigateToProfile() {
     this.navCtrl.push(ProfilePage); 
   }

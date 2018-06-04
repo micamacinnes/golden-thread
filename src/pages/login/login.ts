@@ -5,6 +5,7 @@ import { ProfilePage } from '../profile/profile';
 import { BrowsePage } from '../browse/browse';
 import { User } from '../../models/user';
 import { HomePage } from '../home/home';
+import { RegisterPage } from '../register/register';
 import { SettingsPage } from '../settings/settings';
 
 
@@ -44,6 +45,10 @@ export class LoginPage {
 
   navigateToSettings() {
     this.navCtrl.push(SettingsPage);
+  }
+
+  navigateToRegister() {
+    this.navCtrl.push(RegisterPage);
   }
 
 

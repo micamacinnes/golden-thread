@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { Charity } from '../../models/charity';
 
 
 
@@ -9,12 +10,14 @@ import { NavController } from 'ionic-angular';
 })
 export class CharityProfilePage {
   
+  public charity: Charity;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.charity = this.navParams.get("charity");
   }
-  
-  
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad CharityProfilePage');
+  }
 
 }
-

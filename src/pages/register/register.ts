@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { User } from '../../models/user';
+
 
 @Component({
   selector: 'page-register',
@@ -8,14 +10,14 @@ import { LoginPage } from '../login/login';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController) {
+  public user: User = new User();
 
+  constructor(public navCtrl: NavController) {
   }
 
   navigateToLogin() {
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(LoginPage, {
+      user: this.user,
+    });
   }
-
-
-
 }
